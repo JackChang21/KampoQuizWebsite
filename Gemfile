@@ -47,5 +47,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'haml-rails'
+gem 'mysql2', '0.3.15'
+gem 'asset_sync'
 ruby '2.1.0'
 
