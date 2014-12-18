@@ -1,0 +1,293 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+/*******************************
+GENERAL
+********************************/
+body {
+	width: 940px;
+	margin: 0 auto;
+	font: normal 1.0em/1.5 sans-serif;
+	color: #222;
+	background: white;
+}
+
+#main_wrapper {
+	margin: 0 auto;
+	padding: 0 5%;
+	background: orange;
+}
+
+#main_wrapper,
+#headder,
+#site_logo,
+#site_name,
+#navigation_bar,
+#main_contents,
+#footer,
+.link_block,
+.profile_photo
+ {
+	float: left;
+}
+
+#headder {
+	a {
+		text-decoration: none;
+	}
+}
+
+#site_name {
+	text-align: left;
+	padding-top: 10px;
+	display: inline;
+
+	h1 {
+		color: black;
+		text-decoration: none;
+		margin: 0 0 0 30px;
+	
+		font-family: 'Oswald', sans-serif;
+		
+		/* (target: 58px) / (default browser font size: 16px) */
+		font-size: 3.000em;
+	}
+
+	h3 {
+		text-align: center;
+		color: black;
+		text-decoration: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+#navigation_bar {
+	border-color: #599a68;
+	display: inline-block;
+	padding: 10px 0;
+
+	ul {
+		float: right;
+		padding: 50px 30px 0 0;
+	}
+
+	li {
+		display: inline;
+		border: 1px solid white;
+		border-radius: 5px;
+		padding: 10px;
+		margin-left: 10px;
+
+		&:hover {
+			background: white;
+			color: orange;
+		}
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+h3 {
+	margin: 0 0 1em 0;	
+}
+
+a {
+	
+}
+
+#main_contents {
+	margin-top: 20px;
+}
+
+
+
+
+//Resiponsible Pageを作るには必要
+img {
+	max-width: 100%;
+	float: center;
+	display: block;
+	margin: 0px auto;
+}
+
+#footer {
+	p {
+		text-align: center;
+	}
+}
+/*******************************
+PAGE: INDEX
+********************************/
+.sample_app,
+.app_description {
+	float: left;
+}
+
+.short_message {
+	h2 {
+		text-align: center;
+		margin: 0 0 30px 0;
+	}
+}
+
+.sample_app {
+	p {
+		text-align: center;
+	}
+}
+
+.app_image {
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+}
+
+.app_store_download_logo {
+	display: block;
+	max-width: 150px;
+	margin: 30px auto 10px;
+}
+
+.app_description {
+	h2 {
+		text-align: center;
+		margin: 0;
+	}
+
+	h3 {
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 0px;
+	}
+}
+
+/*******************************
+PAGE: ABOUT
+********************************/
+
+.book_list,
+.contact_info {
+	float: left;
+}
+
+.book_list {
+	margin-bottom: 20px;
+	a{
+		text-decoration: none;
+		color: black;
+		
+		&:hover {
+			color: white;
+		}
+	}
+}
+.profile_photo {
+	display: block;
+	max-width: 150px;
+	margin: 0 auto 30px;
+	border-radius: 100%;
+}
+
+.contact_info {
+	padding: 0;
+	margin: 0;
+	font-size: 0.9em;
+
+	a {
+		text-decoration: none;
+		display: block;
+		min-height: 20px;
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+		padding: 0 0 0 30px;
+		margin: 0 0 10px;
+		color: black;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	li.phone {
+		a {
+			background-image: url('/assets/icon/phone.png')
+		}
+	}
+
+	li.mail {
+		a {
+			background-image: url('/assets/icon/mail.png')
+		}
+	}
+
+	li.twitter {
+		a {
+			background-image: url('/assets/icon/twitter.png')
+		}
+	}
+
+	li.facebook {
+		a {
+			background-image: url('/assets/icon/facebook.png')
+		}
+	}
+}
+/*******************************
+PAGE: CONTACT
+********************************/
+
+
+/*******************************
+PAGE: LINK
+********************************/
+.link_block {	
+}
+
+.link_name {
+	text-align: center;
+
+	a {
+		text-decoration: none;
+		color: black;
+
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.link_image {
+	width: 376px;
+	margin: 0 auto;
+
+	img {
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.link_description {
+	width: 376px;
+	margin: 0 auto;
+}

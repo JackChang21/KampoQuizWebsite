@@ -1,0 +1,56 @@
+!!!
+%html{:lang => "jp"}
+
+//Meta Data
+%head
+	%meta{:charset => "utf-8"}
+
+	%title 
+		漢方クイズアプリ
+
+	/*** CSS for Deleting default css attribute ***/
+	%link{:rel => "stylesheet", :href => "normalize.css.scss"}
+	%link{:rel => "stylesheet", :href => "basic_grid.css.scss"}
+	/ %link{:rel => "stylesheet", :href => "grid.css.scss"}
+	%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Oswald"}
+	/ %meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
+
+	= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true 
+	/ %link{:rel => "stylesheet", :href => "responsive.css.scss"}
+
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= csrf_meta_tags
+	= favicon_link_tag 'favicon.ico'
+
+
+%body
+	#main_wrapper
+		#headder.grid_12
+			= link_to root_path do
+				#site_name.grid_6
+					%h1
+						漢方クイズアプリ
+					%h3
+						\~ 漢方をもっと身近に ~
+
+			#navigation_bar.grid_6
+				%ul
+					= link_to root_path do
+						%li Home 
+					= link_to about_path do 
+						%li	About
+					= link_to link_path do 
+						%li Link	
+					/ = link_to contact_path do 
+					/ 	%li Contact	
+
+		#main_contents.grid_12
+			=yield
+
+		#footer.grid_12
+			/ %a(href='https://twitter.com/share' class='twitter-share-button' data-url='http://example.com' data-count='horizontal' data-lang='en')Tweet
+
+			.fb-like-box(data-href="https://www.facebook.com/pages/%E6%B8%A1%E8%BE%BA%E8%B3%A2%E6%B2%BB%E7%A0%94%E7%A9%B6%E4%BC%9A/1425824640965426" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false")
+			.grid_12
+				%p
+					&copy; 2014 慶應義塾大学SFC 渡辺賢治研究会

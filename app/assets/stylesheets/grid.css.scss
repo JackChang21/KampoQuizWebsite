@@ -1,0 +1,110 @@
+$max_width: 940px;
+
+/* Global
+=================== */
+
+.grid_container {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: atuo;
+	margin-right: atuo;
+}
+
+img {
+	width: 100%;
+}
+
+/* Media Queries
+=================== */
+	
+	/* Columns
+	============================================ */
+	//Grid Containerで"gird_"で始まるものに限定
+	.grid_container > [class^="grid_"] {
+		float: left;
+		min-height: 1px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: (20px / $max_width)*100%
+	}
+
+	.grid_container > [class^="grid_"]:first-child {
+		margin-left: 0;
+	}
+
+	.grid_container > [class^="grid_"]:last-child {
+		float: right;
+	}
+
+
+	/* Columns are 60px wide, with 20px gutters
+	URL: http://gridulator.com/
+	============================================ */
+	.grid_1 {
+		/* width: 60px */
+  	width: (60px / $max_width)*100%;
+	}
+
+	.grid_2 {
+		/* width: 140px */
+  	width: (140px / $max_width)*100%;
+	}
+
+	.grid_3 {
+  	/* width: 220px */
+  	width: (220px / $max_width)*100%;
+	}
+
+	.grid_4 {
+  	/* width: 300px */
+  	width: (300px / $max_width)*100%;
+	}
+
+	.grid_5 {
+  	/* width: 380px */
+  	width: (380px / $max_width)*100%;
+	}
+
+	.grid_6 {
+  	/* width: 460px */
+  	width: (460px / $max_width)*100%;
+	}
+
+	.grid_7 {
+  	/* width: 540px */
+  	width: (540px / $max_width)*100%;
+	}
+
+	.grid_8 {
+  	/* width: 620px */
+  	width: (620px / $max_width)*100%;
+	}
+
+	.grid_9 {
+  	/* width: 700px */
+  	width: (700px / $max_width)*100%;
+	}
+
+	.grid_10 {
+  	/* width: 780px */
+  	width: (780px / $max_width)*100%;
+	}
+
+	.grid_11 {
+  	/* width: 860px */
+  	width: (860px / $max_width)*100%;
+	}
+
+	.grid_12 {
+  	/* width: 940px */
+  	width: (940px / $max_width)*100%;
+	}
+
+	/* Clearfix
+	============================================ */
+	.group::after,
+	.grid_container::after {
+		contetn: "  ";
+		display: table;
+		clear: both;
+	}

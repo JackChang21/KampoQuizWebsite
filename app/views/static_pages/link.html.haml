@@ -1,0 +1,39 @@
+- provide(:title, 'Link Page')
+- content_for(:description, 'Link to other sites')	
+
+.link_block.grid_6
+	.link_name
+		= link_to "https://www.facebook.com/pages/%E6%B8%A1%E8%BE%BA%E8%B3%A2%E6%B2%BB%E7%A0%94%E7%A9%B6%E4%BC%9A/1425824640965426" do
+			%h3
+				渡辺賢治研究会		
+	.link_image
+		= link_to "https://www.facebook.com/pages/%E6%B8%A1%E8%BE%BA%E8%B3%A2%E6%B2%BB%E7%A0%94%E7%A9%B6%E4%BC%9A/1425824640965426" do
+			%img{:src => "/assets/link/watanabe_kenji_sfc.png", :alt => "Sample image"}
+	.link_description
+		%p
+			慶應義塾大学湘南藤沢キャンパス（SFC）渡辺賢治研究会のフェイスブックページです。普段の研究会活動の様子やイベントなどを紹介します。		
+
+.link_block.grid_6
+	.link_name
+		= link_to "http://me-byo.com/" do
+			%h3
+				未病チェックシート	
+	.link_image
+		= link_to "http://me-byo.com/" do
+			%img{:src => "/assets/link/me_byo.png", :alt => "Me-byo Check Sheet Webpage"}
+	.link_description
+		%p
+			漢方による診断で自分の現在の未病の状態と未病を治す養生法が紹介されています。慶應義塾大学渡辺賢治教授が監修しています。				
+
+.link_block.grid_6
+	.link_name
+		= link_to "http://www.kampodesk.com/" do
+			%h3
+				漢方デスク
+	.link_image
+		= link_to "http://www.kampodesk.com/" do
+		
+			%img{:src => "/assets/link/kampodesk.png", :alt => "Kampodesk webpage"}
+	.link_description
+		%p
+			漢方に関する情報が集まったポータブルサイトです。自分のタイプに合わせた生活習慣の改善を提案してくれます。	
