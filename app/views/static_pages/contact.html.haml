@@ -1,3 +1,21 @@
 - provide(:title, 'Contact')
 - content_for(:description, 'Contact to owner of this website')
 
+
+%form.form-inline
+	.form-group
+		%label.sr-only.control-label(for="email")
+			Email
+		%input.form-control(type="text" id="email" placeholder="email")
+		/ %span.help-block
+		/ 	Error!
+
+	.form-group
+		%input.btn.btn-praimary(type="submit" value="submit")
+
+	%p
+		%i.glyphicon.glyphicon-book
+			Book
+
+
+

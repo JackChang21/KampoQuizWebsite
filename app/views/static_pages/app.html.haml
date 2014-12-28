@@ -1,0 +1,65 @@
+- provide(:title, 'Index Page')
+- content_for(:description, 'Let\'s play Kampo Quiz app')
+
+.container
+	.jumbotron
+		.row
+			.col-md-6
+				%h1 漢方を学ぶ！
+				%p.lead 輝かしいアプリ
+				%a.btn.btn-primary.btn-lg{:href => "https://itunes.apple.com/us/app/han-fangkuizu/id942073931?mt=8"}iOS
+		
+			.col-md-6
+				.app_image
+					%img.img-responsive{:src => "/assets/demo.png", :alt => "Sample image"}
+				
+	/ .row
+	/ 	.col-md-12
+	/ 		.alert.alert-info
+	/ 			%button.close(data-dismiss="alert")お知らせ	
+
+.jumbotron
+	%p afalfjalgja;a
+
+.primary_content
+	.row
+		.col-md-12
+			.short_message
+				%h2.text-center
+					東洋医学・漢方・薬膳に関する問題を出題！
+
+	.row
+		.sample_app.col-md-6
+			.app_image
+				%img.img-responsive{:src => "/assets/demo.png", :alt => "Sample image"}
+
+			.app_store_download_logo
+				= link_to "https://itunes.apple.com/us/app/han-fangkuizu/id942073931?mt=8" do
+					%img.img-responsive{:src => "/assets/apple_store_logo.png", :alt => "App Store logo"}
+					
+			%p.text-center
+				for iPhone / iPad
+
+			%a.btn.btn-success.btn-lg
+				Download the app 
+
+		.app_description.col-md-6
+			%h3.text-center
+				こんな人にオススメ!
+			%img.img-responsive{:src => "/assets/illustoration/group_1.png", :alt => "Sample image"}
+			%h3.text-center.lead
+				東洋医学に興味がある
+		
+			%img.img-responsive{:src => "/assets/illustoration/group_2.png", :alt => "Sample image"}
+			%h3.text-center
+				美と健康を維持したい！
+		
+			%img.img-responsive{:src => "/assets/illustoration/group_3.png", :alt => "Sample image"}	
+			%h3.text-center
+				ヘルスケア産業従事者	
+
+			%p
+				%i.glyphicon.glyphicon-book Book
+
+
+

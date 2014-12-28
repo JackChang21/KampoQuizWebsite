@@ -19,8 +19,10 @@ gem 'mini_magick'
 # For Carrierwave
 gem 'fog'
 
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -53,6 +55,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'haml-rails'
 gem 'mysql2', '0.3.15'
-gem 'asset_sync'
+gem 'devise'
+
 ruby '2.1.0'
 

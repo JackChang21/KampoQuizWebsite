@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
   get "link" => "static_pages#link"
+  get "app" => "static_pages#app"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
