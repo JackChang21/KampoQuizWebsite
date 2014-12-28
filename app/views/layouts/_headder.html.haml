@@ -1,0 +1,22 @@
+.navbar.navbar-inverse.navbar-fixed-top
+	.container
+		%headder.page-headder
+			%button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-collapse")
+				%span.icon-bar
+				%span.icon-bar
+				%span.icon-bar
+				
+			.navbar-brand.text-muted
+				= link_to "漢方クイズアプリ", "root_path"
+
+
+			.collapse.navbar-collapse.navbar-right
+				%ul.nav.pull-right.nav-pills
+					%li.active
+						= link_to 'Home', root_path
+					%li
+						= link_to 'About', about_path
+					%li
+						= link_to 'Link', link_path
+
+			\
