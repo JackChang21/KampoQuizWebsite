@@ -61,5 +61,4 @@ gem 'haml-rails'
 gem 'mysql2', '0.3.15'
 gem 'devise'
 
-ruby '2.1.0'
 
