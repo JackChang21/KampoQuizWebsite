@@ -60,5 +60,5 @@ gem 'spring',        group: :development
 gem 'haml-rails'
 gem 'mysql2', '0.3.15'
 gem 'devise'
-ruby '2.0.0'
+ruby '2.1.0'
 
