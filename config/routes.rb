@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "contact" => "static_pages#contact"
   get "app" => "static_pages#app"
   get "links" => "links#index"
+  get "lessons" => "questions#index"
 
   resources :questions
 

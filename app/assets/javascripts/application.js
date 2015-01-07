@@ -48,10 +48,3 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-(function) {
-  ('#back-to-top').hide();
-  (window).scroll(funtion() {
-    ('#pos').text((this).scrollTop());
-  });
-}
-

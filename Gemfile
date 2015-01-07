@@ -23,6 +23,9 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'compass-rails'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
+gem 'nokogiri', '1.6.5'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

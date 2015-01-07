@@ -1,0 +1,60 @@
+- provide(:title, "クイズ")
+- content_for(:description, 'クイズに挑戦！')
+
+.container
+	
+	.row
+		.col-md-10.col-md-offset-1
+			%h3 問題
+			.jumbotron
+				%p
+					= @question_content
+
+			.radio
+				%label
+					%input{"type" => "radio", "name" => "optionsRadios", "id" => "optionsRadios1", "value" => "#{@question.first_option}", "checked" => "checked"}
+						=	@first_option
+
+			.radio
+				%label
+					%input{"type" => "radio", "name" => "optionsRadios", "id" => "optionsRadios2", "value" => "#{@question.second_option}"}
+						=	@second_option
+
+			.radio
+				%label
+					%input{"type" => "radio", "name" => "optionsRadios", "id" => "optionsRadios3", "value" => "#{@question.third_option}"}
+						= @third_option
+
+			#show-answer
+				%p
+					正解：
+					=@answer
+				%p
+					解説：
+					=@explanation
+
+			:javascript
+				$(function(){
+					$('#show-answer').hide();
+					$('#show-next-question-button').hide();
+
+					$('#show-answer-button a').click(function(){
+						$('#show-answer').show();
+						$('#show-next-question-button').show();
+						$('#show-answer-button').hide();
+
+					});
+				});
+
+
+	.row
+		.col-md-12
+			%ul.list-inline.text-center
+				%li#show-next-question-button
+					%a.btn.btn-primary.btn-lg{"href" => "/questions/#{@random_number}"} 次の問題へ
+				%li#show-answer-button
+					%a.btn.btn-primary.btn-lg{"href" => "#"} 結果画面へ
+				%li
+					%a.btn.btn-default.btn-lg{"href" => root_path} ホームへ戻る
+				/ %li
+				/ 	%a.btn.btn-default.btn-lg{"href" => "javascript:window.history.back();"} 戻る
