@@ -1,0 +1,14 @@
+.container
+	.row
+		- @links.each do |item|
+			.col-md-6
+				.link-name
+					%h3.text-center
+						= link_to "#{item.title}", "#{item.url}"	
+
+				.link-image
+					= link_to "#{item.url}" do
+						%img.img-responsive{:src => "/assets/link/#{item.image}", :alt => "#{item.image}"}
+
+				.link-description
+					%p= item.description

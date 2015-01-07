@@ -17,15 +17,32 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap/theme";
+@import "compass";
 
 /*******************************
 GENERAL
 ********************************/
 
 body {
-	padding-top: 60px;
+	padding-top: 70px;
 }
 .container {
 	max-width: 940px;
-	
+}
+
+/*******************************
+LINK
+********************************/
+.link-image {
+	img {
+		margin: 0 auto;
+	}
+}
+
+.link-description {
+	width: 100%;
+	height: 80px;
+	p {
+		margin-top: 20px;
+	}
 }

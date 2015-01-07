@@ -20,6 +20,7 @@ gem 'mini_magick'
 gem 'fog'
 
 gem 'sass-rails', '~> 4.0.3'
+gem 'compass-rails'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 

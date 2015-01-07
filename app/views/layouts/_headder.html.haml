@@ -1,22 +1,41 @@
-.navbar.navbar-inverse.navbar-fixed-top
-	.container
-		%headder.page-headder
-			%button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-collapse")
-				%span.icon-bar
-				%span.icon-bar
-				%span.icon-bar
-				
-			.navbar-brand.text-muted
-				= link_to "漢方クイズアプリ", "root_path"
+%nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+  .container
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle{"type" => "button", "data-target" => "#navbar", "data-toggle" => "collapse"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => root_path} 漢方クイズ
+    / Collect the nav links, forms, and other content for toggling
+    #navbar.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{"href" => root_path} ホーム
+        %li
+          %a{"href" => questions_path} クイズ
+        / %li
+        /   %a{"href" => about_path} 学ぶ
+        %li
+          %a{"href" => about_path} アプリについて
+        %li
+          %a{"href" => links_path} リンク
+        %li.dropdown
+          %a.dropdown-toggle{"href" => "#", "data-toggle" => "dropdown"}
+            ダウンロード 
+            %span.caret
+          %ul.dropdown-menu{:role => "menu"}
+            %li.dropdown-header
+              App
+            %li.divider
+            %li
+              %a{:href => "https://itunes.apple.com/us/app/han-fangkuizu/id942073931?mt=8"} iOS (for iPhone)
+            / %li
+            /   %a{:href => "#"} Android
 
-
-			.collapse.navbar-collapse.navbar-right
-				%ul.nav.pull-right.nav-pills
-					%li.active
-						= link_to 'Home', root_path
-					%li
-						= link_to 'About', about_path
-					%li
-						= link_to 'Link', link_path
-
-			\
+      / %form.navbar-form.navbar-left{:role => "search"}
+      /   .form-group
+      /     %input.form-control{:placeholder => "Search", :type => "text"}
+      /   %button.btn.btn-default{:type => "submit"} Submit
+      

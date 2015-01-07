@@ -1,0 +1,33 @@
+- provide(:title, "クイズ")
+- content_for(:description, 'クイズに挑戦！')
+
+.container
+	- @questions.each_with_index do |question, i|
+		.row
+			.col-md-10.col-md-offset-1
+				%h3 問題#{i+1}.
+				.jumbotron
+					%p
+						=question.question
+
+				.radio
+					%label
+						%input{"type" => "radio", "name" => "optionsRadios", "id" => "optionsRadios1", "value" => "#{question.first_option}", "checked" => "checked"}
+							=question.first_option
+
+				.radio
+					%label
+						%input{"type" => "radio", "name" => "optionsRadios", "id" => "optionsRadios2", "value" => "#{question.second_option}"}
+							=question.second_option
+				.radio
+					%label
+						%input{"type" => "radio", "name" => "optionsRadios", "id" => "optionsRadios3", "value" => "#{question.third_option}"}
+							=question.third_option
+
+				%p=question.answer
+
+	.col-md-1
+		%p afaaf
+
+		= link_to "結果画面へ", root_path
+		= link_to "Go Back", "javascript:window.history.back();"
